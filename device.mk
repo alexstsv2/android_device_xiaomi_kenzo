@@ -27,14 +27,14 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-	audio.offload.disable=1 \
-	audio.offload.pcm.16bit.enable=true \
-	audio.offload.pcm.24bit.enable=true \
-	audio.offload.video=true \
-	persist.audio.fluence.audiorec=false \
-	persist.audio.fluence.spk.mono=true \
-	persist.audio.fluence.voicerec=false \
-	voice.voip.conc.disabled=true
+    audio.offload.disable=1 \
+    audio.offload.pcm.16bit.enable=true \
+    audio.offload.pcm.24bit.enable=true \
+    audio.offload.video=true \
+    persist.audio.fluence.audiorec=false \
+    persist.audio.fluence.spk.mono=true \
+    persist.audio.fluence.voicerec=false \
+    voice.voip.conc.disabled=true
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -62,10 +62,10 @@ PRODUCT_COPY_FILES += \
 
 # Properties - RADIO
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.radio.cs_srv_type=1 \
-	persist.radio.force_on_dc=true \
-	persist.radio.redir_party_num=0 \
-	persist.radio.start_ota_daemon=1
+    persist.radio.cs_srv_type=1 \
+    persist.radio.force_on_dc=true \
+    persist.radio.redir_party_num=0 \
+    persist.radio.start_ota_daemon=1
 
 # Inherit from msm8956-common
 $(call inherit-product, device/xiaomi/msm8956-common/msm8956.mk)
