@@ -21,9 +21,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kipper device
 $(call inherit-product, device/xiaomi/kenzo/device.mk)
 
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 # Device identifier. This must come after all inclusions
+PRODUCT_NAME := lineage_kenzo
 PRODUCT_DEVICE := kenzo
-PRODUCT_NAME := full_kenzo
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := kenzo
+PRODUCT_MODEL := Redmi Note 3 Pro
 PRODUCT_MANUFACTURER := Xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE="kenzo" \
+    PRODUCT_NAME="kenzo" \
+    PRIVATE_BUILD_DESC="kenzo-user 6.0.1 MMB29M V8.2.1.0.MHOCNDL release-keys"
+
+# Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
+BUILD_FINGERPRINT := "Xiaomi/kenzo/kenzo:6.0.1/MMB29M/V8.2.1.0.MHOCNDL:user/release-keys"
